@@ -1,0 +1,788 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{AA8EC0AF-96E6-43F2-A72B-027DF080B506}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>CafeProject.My.MyApplication</StartupObject>
+    <RootNamespace>CafeProject</RootNamespace>
+    <AssemblyName>CafeProject</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>CafeProject.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>CafeProject.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Fox-Icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Guna.UI">
+      <HintPath>..\..\..\..\Documents\Visual Studio Files (2010)\Frameworks\Guna UI\Guna.UI-Framework-Lib-master\Guna.UI-Framework-Lib\.net 4.0\Guna.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Corrected.Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1358.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Corrected.Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1358.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.3.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Corrected.Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1358.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Corrected.Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1358.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Corrected.Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1358.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AccountControl.Designer.vb">
+      <DependentUpon>AccountControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AccountControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AdvanceSettingsControl.Designer.vb">
+      <DependentUpon>AdvanceSettingsControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AdvanceSettingsControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ChatBoxControl.Designer.vb">
+      <DependentUpon>ChatBoxControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ChatBoxControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Class1.vb" />
+    <Compile Include="ClientControl1.Designer.vb">
+      <DependentUpon>ClientControl1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ClientControl1.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ClientData.vb" />
+    <Compile Include="ClientFileAndDirectoryBrowser.Designer.vb">
+      <DependentUpon>ClientFileAndDirectoryBrowser.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ClientFileAndDirectoryBrowser.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClientHomeData.Designer.vb">
+      <DependentUpon>ClientHomeData.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ClientHomeData.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ClientMessageControl.Designer.vb">
+      <DependentUpon>ClientMessageControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ClientMessageControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ClientScreenControl.Designer.vb">
+      <DependentUpon>ClientScreenControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ClientScreenControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ClientTimeControl.Designer.vb">
+      <DependentUpon>ClientTimeControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ClientTimeControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CommandData.vb" />
+    <Compile Include="ContactData.vb" />
+    <Compile Include="Converter.vb" />
+    <Compile Include="CreateAccount.Designer.vb">
+      <DependentUpon>CreateAccount.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CreateAccount.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomMessageBox.Designer.vb">
+      <DependentUpon>CustomMessageBox.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CustomMessageBox.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DataSet1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DirectoryData.vb" />
+    <Compile Include="DriveInformation.vb" />
+    <Compile Include="EditAccount.Designer.vb">
+      <DependentUpon>EditAccount.vb</DependentUpon>
+    </Compile>
+    <Compile Include="EditAccount.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FileAndDirectoryControl.Designer.vb">
+      <DependentUpon>FileAndDirectoryControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FileAndDirectoryControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="fileData.vb" />
+    <Compile Include="FileDataControl.Designer.vb">
+      <DependentUpon>FileDataControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FileDataControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FileInfo.vb" />
+    <Compile Include="FileShareForm.Designer.vb">
+      <DependentUpon>FileShareForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FileShareForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Information.vb" />
+    <Compile Include="LoginData.vb" />
+    <Compile Include="LoginForm.Designer.vb">
+      <DependentUpon>LoginForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="LoginForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main.Designer.vb">
+      <DependentUpon>Main.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainAccountControl.Designer.vb">
+      <DependentUpon>MainAccountControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MainAccountControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ManageAccount.Designer.vb">
+      <DependentUpon>ManageAccount.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ManageAccount.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManageClientControl.vb" />
+    <Compile Include="MessageData.vb" />
+    <Compile Include="MsgStorage.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="ObjectExtension.vb" />
+    <Compile Include="OpenClient.Designer.vb">
+      <DependentUpon>OpenClient.vb</DependentUpon>
+    </Compile>
+    <Compile Include="OpenClient.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RemoteData.vb" />
+    <Compile Include="ReportForm.Designer.vb">
+      <DependentUpon>ReportForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ReportForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RequestClientInfoData.vb" />
+    <Compile Include="RequestFileShare.vb" />
+    <Compile Include="SaleRecordControl.Designer.vb">
+      <DependentUpon>SaleRecordControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SaleRecordControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SalesSearch.Designer.vb">
+      <DependentUpon>SalesSearch.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SalesSearch.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ScreenCapture.vb" />
+    <Compile Include="ScreenControl.Designer.vb">
+      <DependentUpon>ScreenControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ScreenControl.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ScreenData.vb" />
+    <Compile Include="ScreenInformation.Designer.vb">
+      <DependentUpon>ScreenInformation.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ScreenInformation.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SetClientTime.Designer.vb">
+      <DependentUpon>SetClientTime.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SetClientTime.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SettingControl.Designer.vb">
+      <DependentUpon>SettingControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SettingControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Settings.Designer.vb">
+      <DependentUpon>Settings.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Settings.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SettingsData.vb" />
+    <Compile Include="ShadowForm.Designer.vb">
+      <DependentUpon>ShadowForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ShadowForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SlideShowData.vb" />
+    <Compile Include="SpecialFolder.Designer.vb">
+      <DependentUpon>SpecialFolder.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SpecialFolder.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Startup.Designer.vb">
+      <DependentUpon>Startup.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Startup.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TimeData.vb" />
+    <Compile Include="UserData.vb" />
+    <Compile Include="VouchControl.Designer.vb">
+      <DependentUpon>VouchControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="VouchControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="VoucherForm.Designer.vb">
+      <DependentUpon>VoucherForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="VoucherForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VouchReportForm.Designer.vb">
+      <DependentUpon>VouchReportForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="VouchReportForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WebsiteBlockData.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="AccountControl.resx">
+      <DependentUpon>AccountControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdvanceSettingsControl.resx">
+      <DependentUpon>AdvanceSettingsControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChatBoxControl.resx">
+      <DependentUpon>ChatBoxControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClientControl1.resx">
+      <DependentUpon>ClientControl1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClientFileAndDirectoryBrowser.resx">
+      <DependentUpon>ClientFileAndDirectoryBrowser.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClientHomeData.resx">
+      <DependentUpon>ClientHomeData.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClientMessageControl.resx">
+      <DependentUpon>ClientMessageControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClientScreenControl.resx">
+      <DependentUpon>ClientScreenControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClientTimeControl.resx">
+      <DependentUpon>ClientTimeControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CreateAccount.resx">
+      <DependentUpon>CreateAccount.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomMessageBox.resx">
+      <DependentUpon>CustomMessageBox.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditAccount.resx">
+      <DependentUpon>EditAccount.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FileAndDirectoryControl.resx">
+      <DependentUpon>FileAndDirectoryControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FileDataControl.resx">
+      <DependentUpon>FileDataControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FileShareForm.resx">
+      <DependentUpon>FileShareForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginForm.resx">
+      <DependentUpon>LoginForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main.resx">
+      <DependentUpon>Main.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainAccountControl.resx">
+      <DependentUpon>MainAccountControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManageAccount.resx">
+      <DependentUpon>ManageAccount.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OpenClient.resx">
+      <DependentUpon>OpenClient.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportForm.resx">
+      <DependentUpon>ReportForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SaleRecordControl.resx">
+      <DependentUpon>SaleRecordControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SalesReport.rdlc" />
+    <EmbeddedResource Include="SalesSearch.resx">
+      <DependentUpon>SalesSearch.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ScreenControl.resx">
+      <DependentUpon>ScreenControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ScreenInformation.resx">
+      <DependentUpon>ScreenInformation.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SetClientTime.resx">
+      <DependentUpon>SetClientTime.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingControl.resx">
+      <DependentUpon>SettingControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settings.resx">
+      <DependentUpon>Settings.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShadowForm.resx">
+      <DependentUpon>ShadowForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SpecialFolder.resx">
+      <DependentUpon>SpecialFolder.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Startup.resx">
+      <DependentUpon>Startup.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VouchControl.resx">
+      <DependentUpon>VouchControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VoucherForm.resx">
+      <DependentUpon>VoucherForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VoucherReport.rdlc" />
+    <EmbeddedResource Include="VouchReportForm.resx">
+      <DependentUpon>VouchReportForm.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DataSet1.xsc">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet1.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet1.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="DataSet1.xss">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="Resources\close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close_grey.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close_red.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\graph_pink.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home_grey.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Home_pink.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Minimize_black.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minimize_grey.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Monitor_grey.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\monitor_pink.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sales.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Settings.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Settings_pink.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\busy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\online.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\valorant front page.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\File.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Folder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Image_file.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Music.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Send_message.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Chart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\office.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menu_vertical.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search_folder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search_folder_grey.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Timer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Timer_white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\left_grey.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\document.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\musicFolder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pictures.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Videos.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Drive.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Drive1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\View1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\view_white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel_96px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\info.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\info_96px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Register Image.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\settings-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\settings-241.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\settings-242.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\settings-48-white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logout-grey.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logout-grey1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logout-white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\back-grey.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\back-white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\go_back_red.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\goback-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\next_page_48px-red.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\next-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\monitor_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bar_chart_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\settings_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\workstation_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\server_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\paint_roller_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Settings logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\account_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bulleted_list_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bulleted_list_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\console_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\high_importance_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Main Logo %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Redfox.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Redfox Logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\welcome.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\monitor_48px gold.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fox art.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minimize_white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Close_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pricing.png" />
+    <None Include="Resources\people.png" />
+    <None Include="Resources\data-server.png" />
+    <None Include="Resources\monitor.png" />
+    <None Include="Resources\log-document.png" />
+    <None Include="Resources\console.png" />
+    <None Include="Resources\info_48px.png" />
+    <None Include="Resources\male_user_48px.png" />
+    <None Include="Resources\server %281%29.png" />
+    <None Include="Resources\cpu-tower.png" />
+    <None Include="Resources\Close_black.png" />
+    <None Include="Resources\registration_24px.png" />
+    <None Include="Resources\admin_settings_male_48px.png" />
+    <None Include="Resources\add_user_male_48px.png" />
+    <None Include="Resources\admin_Update_Account.png" />
+    <None Include="Resources\admin_Remove_Account.png" />
+    <None Include="Resources\Admin_Disabled_Account.png" />
+    <None Include="Resources\Computer Monitor.jpg" />
+    <None Include="Resources\valorant front page1.jpg" />
+    <None Include="Resources\cpu-tower1.png" />
+    <None Include="Resources\Computer Monitor1.jpg" />
+    <None Include="Resources\Extend_Silver.png" />
+    <None Include="Resources\Extend.png" />
+    <None Include="Resources\stoptime.png" />
+    <None Include="Resources\Stoptime_Silver.png" />
+    <None Include="Resources\Broadcast_Silver.png" />
+    <None Include="Resources\Broadcast_Blue.png" />
+    <None Include="Resources\cancel_48px.png" />
+    <None Include="Resources\cancel_red.png" />
+    <Content Include="Fox-Icon.ico" />
+    <None Include="Resources\Fox Icon.png" />
+    <None Include="Resources\search_grey.png" />
+    <None Include="Resources\dateSearch_grey.png" />
+    <None Include="Resources\dateSearch_blue.png" />
+    <None Include="Resources\lock-48.png" />
+    <None Include="Resources\unlock.png" />
+    <None Include="Resources\shutdown_48px.png" />
+    <None Include="Resources\restart_48px.png" />
+    <None Include="Resources\user.png" />
+    <None Include="Resources\male_admin.png" />
+    <None Include="Resources\unlock1.png" />
+    <None Include="Resources\unlock2.png" />
+    <None Include="Resources\user1.png" />
+    <None Include="Resources\user2.png" />
+    <None Include="Resources\monitor_96px.png" />
+    <None Include="Resources\monitor_48px grey.png" />
+    <None Include="Resources\hibernate_48px.png" />
+    <Content Include="SqlServerTypes\Loader.cs" />
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+</Project>
